@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/mariuscadar/myself/issues"
   },
-  "homepage": "https://github.com/mariuscadar/myself#readme"
+  "homepage": "https://github.com/mariuscadar/myself#readme",
+  "engines": {
+    "node": "8.9.3"
+  }
 }
