@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Marius Cadar KendoUI Play</title>
+    <title>Marius Cadar Resume</title>
     <link rel="stylesheet" href="http://kendo.cdn.telerik.com/2017.3.1026/styles/kendo.common.min.css" />
     <link rel="stylesheet" href="http://kendo.cdn.telerik.com/2017.3.1026/styles/kendo.default.min.css" />
     <link rel="stylesheet" href="http://kendo.cdn.telerik.com/2017.3.1026/styles/kendo.default.mobile.min.css" />
@@ -10,6 +10,7 @@
     <script src="http://kendo.cdn.telerik.com/2017.3.1026/js/kendo.all.min.js"></script>
 </head>
 <body>
+    <h3>Marius Cadar experience</h3>
     <div id="projects"></div>
         <script type="text/javascript">
             $(document).ready(function(){
@@ -25,7 +26,11 @@
                 projectsDataSource.read();
 
                 $("#projects").kendoGrid({
-                    dataSource: projectsDataSource
+                    dataSource: projectsDataSource,
+                    columns: [
+                        { field: "name", title:"Technology used"},
+                        { field: "year", title:"Year"},
+                    ]
                 });
             });
         </script>
