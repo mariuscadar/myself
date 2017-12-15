@@ -1,1 +1,32 @@
-<h1>Hello world!</h1>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Marius Cadar KendoUI Play</title>
+    <link rel="stylesheet" href="http://kendo.cdn.telerik.com/2017.3.1026/styles/kendo.common.min.css" />
+    <link rel="stylesheet" href="http://kendo.cdn.telerik.com/2017.3.1026/styles/kendo.default.min.css" />
+    <link rel="stylesheet" href="http://kendo.cdn.telerik.com/2017.3.1026/styles/kendo.default.mobile.min.css" />
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="http://kendo.cdn.telerik.com/2017.3.1026/js/kendo.all.min.js"></script>
+</head>
+<body>
+    <div id="projects"></div>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                var projects = [
+                    {name:"KendoApp", year:2017},
+                    {name:"Azure ARM Templates", year:2016},
+                    {name:"Database projects", year:2016},
+                    {name:"KnockoutJS", year:2015},
+                    {name:"NodeJS", year:2015}
+                ];
+
+                var projectsDataSource = new kendo.data.DataSource({data: projects});
+                projectsDataSource.read();
+
+                $("#projects").kendoGrid({
+                    dataSource: projectsDataSource
+                });
+            });
+        </script>
+</body>
